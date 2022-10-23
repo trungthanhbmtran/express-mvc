@@ -1,0 +1,12 @@
+@urlDev=http://localhost:3006
+POST {{urlDev}}/v1/upload/register
+Content-Type: multipart/form-data
+
+{
+    "email" : "thanhkute1213342323@gmail.com",
+    "password" : "thanh123321321"
+}
+
+###
+
+GET  {{urlDev}}/v1/upload/files/

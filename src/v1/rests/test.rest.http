@@ -1,0 +1,42 @@
+@urlDev=http://localhost:3006
+
+### checkStatus
+
+GET {{urlDev}}/checkstatus
+
+###
+POST {{urlDev}}/v1/user/register
+Content-Type: application/json
+
+{
+    "email" : "thanhkute12133342323@gmail.com",
+    "password" : "thanh123321321"
+}
+### login
+POST {{urlDev}}/v1/user/login
+Content-Type: application/json
+
+{
+    "email" : "thanhkute12133342323@gmail.com",
+    "password" : "thanh123321321"
+}
+
+###
+
+POST {{urlDev}}/v1/user/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": 
+   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzUyMjQ4MzNlNGY5ZjgwZDVkMzQ5ZjAiLCJpYXQiOjE2NjYzMjc3MDgsImV4cCI6MTY5Nzg4NTMwOH0.n-zlEbIzPh9zUMy6-yhuygNytoSXbhFgpJEP5qSJNis"
+}
+###
+GET {{urlDev}}/v1/user/getlist
+authorization: : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzUyMjQ4MzNlNGY5ZjgwZDVkMzQ5ZjAiLCJpYXQiOjE2NjYzMjc2OTAsImV4cCI6MTY2NjMyNzc0MH0.xqid6QHJiH036y5wKotlQkm-_C_qIGv4e_OCV79xZ-8
+###
+DELETE {{urlDev}}/v1/user/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzUyMjQ4MzNlNGY5ZjgwZDVkMzQ5ZjAiLCJpYXQiOjE2NjY0OTcxMTAsImV4cCI6MTY5ODA1NDcxMH0.ZpG0iH1N5fWCZnbOgyDNgdIwUJVm7Y79a9LFDBvGZ7Y"
+}

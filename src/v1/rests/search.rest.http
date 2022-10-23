@@ -1,0 +1,27 @@
+###
+@urlDev=http://localhost:3006
+
+GET  {{urlDev}}/v1/search?key=thanh-dang-test
+
+###
+PUT    {{urlDev}}/v1/search
+Content-Type:  application/json
+
+{
+    "key" : "thanh-dang-test",
+    "id" : 1,
+    "type" : "player-list",
+    "body" : {
+        "name" : "ronaldo",
+        "age" : 35,
+        "club" : "MU",
+    }
+}
+
+###
+DELETE   {{urlDev}}/v1/search
+Content-Type:  application/json
+
+{
+    "key" : "thanh-dang-test"
+}
